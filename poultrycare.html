@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Care Strategies - PoultryPro AI</title>
+    <link rel="stylesheet" href="poultrycare.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>PoultryPro</h1> 
+            </div>
+            <div class="search-bar-container">
+                <input type="text" id="search-bar" placeholder="Search poultry products (e.g., Eggs, Kano)">
+                <button id="search-btn">Search</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="poultrypro.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#download">Download</a></li>
+                    <li><a href="marketplace.html">Market Place</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="care-strategies">
+            <h1>Poultry Care Strategies</h1>
+            <div class="filters">
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="daily">Daily Care</option>
+                    <option value="seasonal">Seasonal Adjustments</option>
+                    <option value="health">Health & Remedies</option>
+                </select>
+            </div>
+
+            <div class="strategy-list">
+                <div class="strategy-card">
+                    <h2>Daily Feeding Routine</h2>
+                    <p class="source">Source: Agricultural Extension Service</p>
+                    <p>Ensure balanced feed twice daily, adjust based on bird age.</p>
+                    <button class="adopt-btn">Adopt Template</button>
+                    <span class="rating">Rating: ★★★★☆ (4/5)</span>
+                </div>
+                <div class="strategy-card community">
+                    <h2>Garlic Water Remedy</h2>
+                    <p class="source">Contributed by: Farmer John, Nigeria</p>
+                    <p>Add crushed garlic to water to boost immunity.</p>
+                    <button class="adopt-btn">Adopt Template</button>
+                    <span class="rating">Rating: ★★★☆☆ (3/5)</span>
+                </div>
+            </div>
+
+            <div class="contribute">
+                <h2>Share Your Strategy</h2>
+                <form id="strategy-form">
+                    <div class="form-group">
+                        <label for="title">Strategy Title:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="daily">Daily Care</option>
+                            <option value="seasonal">Seasonal Adjustments</option>
+                            <option value="health">Health & Remedies</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+                    </div>
+                    <button type="submit">Submit Strategy</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

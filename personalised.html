@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Farm Setup - PoultryPro AI</title>
+    <link rel="stylesheet" href="features.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>PoultryPro</h1> 
+            </div>
+            <div class="search-bar-container">
+                <input type="text" id="search-bar" placeholder="Search poultry products (e.g., Eggs, Kano)">
+                <button id="search-btn">Search</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="poultrypro.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#download">Download</a></li>
+                    <li><a href="marketplace.html">Market Place</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="personalized-farm-setup">
+            <h1>Personalized Farm Setup</h1>
+            <p>Build your farm with tailored guidance every step of the way.</p>
+            <div class="setup-options">
+                <a href="#farm-profile" class="setup-card">Farm Profile Creation</a>
+                <a href="#housing" class="setup-card">Housing & Infrastructure Advice</a>
+                <a href="#stock-breed" class="setup-card">Initial Stock & Breed Selection</a>
+                <a href="#feed-nutrition" class="setup-card">Feed & Nutrition Planning</a>
+                <a href="#water-management" class="setup-card">Water Management</a>
+                <a href="#waste-management" class="setup-card">Waste Management</a>
+                <a href="#budgeting" class="setup-card">Initial Budgeting</a>
+                <a href="#education" class="setup-card">Education & Training</a>
+            </div>
+        </section>
+
+        <section id="farm-profile">
+            <h2>Farm Profile Creation</h2>
+            <form id="farmProfileForm" action="/create-profile" method="post">
+                <div class="form-group">
+                    <label for="farmName">Farm Name:</label>
+                    <input type="text" id="farmName" name="farmName" placeholder="e.g., John " required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="US">United States</option>
+                </div>
+
+                <div class="form-group" id="state-group">
+                    <label for="state">State/Region:</label>
+                    <select id="state" name="state" disabled required>
+                        <option value="">Select State</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="farmSize">Farm Size (acres):</label>
+                    <input type="number" id="farmSize" name="farmSize" min="0" step="0.1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="farmType">Type of Poultry Farm:</label>
+                    <select id="farmType" name="farmType" required>
+                        <option value="">Select Type</option>
+                        <option value="layers">Egg Production (Layers)</option>
+                        <option value="broilers">Meat Production (Broilers)</option>
+                        <option value="both">Both Egg and Meat</option>
+                        <option value="other">Other (Ducks, Turkeys, etc.)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberOfBirds">Number of Birds:</label>
+                    <input type="number" id="numberOfBirds" name="numberOfBirds" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="breeds">Breeds:</label>
+                    <input type="text" id="breeds" name="breeds" placeholder="e.g., Ross, Lohmann Brown" required>
+                    <small>List breeds separated by commas.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="farmGoals">Farm Goals:</label>
+                    <textarea id="farmGoals" name="farmGoals" placeholder="e.g., Achieve 90% egg production rate" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Create Profile</button>
+                </div>
+            </form>
+        </section>
+        <section id="housing">
+            <h2> Housing & Infrastructure Advice</h2>
+            <div class="housing-info">
+                <p>Based on your farm profile, here’s your housing advice:</p>
+                <div id="housing-output">
+                </div>
+                <button class="view-designs">View Housing Designs</button>
+            </div>
+        </section>
+
+        <section id="stock-breed">
+            <h2> Initial Stock & Breed Selection</h2>
+            <div class="breed-selection">
+                <p>Choose your breeds:</p>
+                <select id="breed" name="breed" multiple>
+                    <option value="ross">Ross (Broilers)</option>
+                    <option value="lohmann">Lohmann Brown (Layers)</option>
+                    <option value="local">Local Breeds</option>
+                </select>
+                <br>
+                <input type="number" id="stock-number" name="stock-number" placeholder="Number of Birds">
+                <button class="select-stock">Confirm Selection</button>
+            </div>
+        </section>
+
+        <section id="feed-nutrition">
+            <h2>d. Feed & Nutrition Planning</h2>
+            <div class="feed-plan">
+                <p>Plan your feed based on your stock:</p>
+                <div id="feed-output">
+                </div>
+                <button class="generate-plan">Generate Feed Plan</button>
+            </div>
+        </section>
+
+        <section id="water-management">
+            <h2>e. Water Management</h2>
+            <div class="water-info">
+                <p>Ensure optimal water supply:</p>
+                <select id="water-system" name="water-system">
+                    <option value="manual">Manual Watering</option>
+                    <option value="automatic">Automatic Waterers</option>
+                </select>
+                <button class="save-water">Save Water Plan</button>
+            </div>
+        </section>
+
+        <section id="waste-management">
+            <h2>f. Waste Management</h2>
+            <div class="waste-options">
+                <p>Choose your waste management method:</p>
+                <select id="waste-method" name="waste-method">
+                    <option value="compost">Composting</option>
+                    <option value="biogas">Biogas Production</option>
+                    <option value="sell">Sell as Fertilizer</option>
+                </select>
+                <button class="save-waste">Save Waste Plan</button>
+            </div>
+        </section>
+
+        <section id="budgeting">
+            <h2>g. Initial Budgeting</h2>
+            <div class="budget-form">
+                <div class="form-group">
+                    <label for="housing-cost">Housing Cost (₦):</label>
+                    <input type="number" id="housing-cost" name="housing-cost">
+                </div>
+                <div class="form-group">
+                    <label for="stock-cost">Stock Cost (₦):</label>
+                    <input type="number" id="stock-cost" name="stock-cost">
+                </div>
+                <div class="form-group">
+                    <label for="feed-cost">Feed Cost (₦):</label>
+                    <input type="number" id="feed-cost" name="feed-cost">
+                </div>
+                <button class="calculate-budget">Calculate Budget</button>
+                <p id="budget-total">Total: ₦0</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>h. Education & Training</h2>
+            <div class="training-content">
+                <p>Access learning resources:</p>
+                <ul>
+                    <li><a href="#">Video: Poultry Housing Basics</a></li>
+                    <li><a href="#">Guide: Feed Mixing 101</a></li>
+                    <li><a href="#">Webinar: Disease Prevention</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

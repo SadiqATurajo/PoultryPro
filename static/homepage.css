@@ -1,0 +1,34 @@
+body{
+    background-color: wheat;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for horizontal alignment */
+}
+
+nav ul li {
+    display: block;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 5px; /* Add rounded corners */
+    margin: 0 5px; /* Add spacing between list items */
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: cadetblue;
+    color: white; 
+}
+
+nav ul li:active {
+    background-color: blanchedalmond;
+}
+
+nav ul li:focus {
+    background-color: lightblue;
+    outline: none;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Disease Consultant - PoultryPro AI</title>
+    <link rel="stylesheet" href="diseaseconsultant.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>PoultryPro</h1> 
+            </div>
+            <div class="search-bar-container">
+                <input type="text" id="search-bar" placeholder="Search poultry products (e.g., Eggs, Kano)">
+                <button id="search-btn">Search</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="poultrypro.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#download">Download</a></li>
+                    <li><a href="marketplace.html">Market Place</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="disease-consultant">
+            <h1>AI Disease Consultant</h1>
+            <p>Get instant poultry health advice anytime, anywhere.</p>
+
+            <div class="consultation-form">
+                <h2>Describe Your Issue</h2>
+                <form id="disease-form">
+                    <div class="form-group">
+                        <label for="symptoms">Symptoms Observed:</label>
+                        <textarea id="symptoms" name="symptoms" placeholder="e.g., coughing, watery eyes" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Upload Photo/Video (Optional):</label>
+                        <input type="file" id="photo" name="photo" accept="image/*,video/*">
+                    </div>
+                    <button type="submit">Consult AI</button>
+                </form>
+            </div>
+
+            <div class="consultation-result" id="result" style="display: none;">
+                <h2>Diagnosis & Recommendations</h2>
+                <div id="diagnosis-output">
+                </div>
+                <button id="vet-contact-btn">Contact Local Vet</button>
+            </div>
+
+            <div class="disease-history">
+                <h2>Your Disease History</h2>
+                <ul id="history-list">
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
